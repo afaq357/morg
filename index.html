@@ -1,1 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Morg - Official Website</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0b0f;
+    color: #fff;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+    padding: 25px 15px 40px;
+}
+
+/* Profile */
+.profile {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.profile img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    margin-bottom: 12px;
+}
+
+.profile h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.profile-info {
+    color: #aaa;
+    font-size: 15px;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.buttons a {
+    flex: 1;
+    text-decoration: none;
+    text-align: center;
+    padding: 13px 8px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background: #24242c;
+    border: 1px solid #3a3a44;
+    transition: 0.2s;
+}
+
+.buttons a:hover {
+    background: #33333d;
+}
+
+/* Main image */
+.main-card {
+    background: #15151b;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #292932;
+}
+
+.main-card img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+.main-content {
+    padding: 18px;
+    text-align: center;
+}
+
+.main-content h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.main-content p {
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Affiliate button */
+.cta {
+    display: block;
+    width: 100%;
+    margin-top: 18px;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    background: #fff;
+    color: #111;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.cta:hover {
+    opacity: 0.9;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer a {
+    color: #777;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.footer p {
+    color: #555;
+    font-size: 11px;
+    margin-top: 10px;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+
+    .container {
+        padding: 20px 12px 30px;
+    }
+
+    .profile img {
+        width: 95px;
+        height: 95px;
+    }
+
+    .profile h1 {
+        font-size: 25px;
+    }
+
+    .buttons a {
+        font-size: 12px;
+        padding: 12px 5px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Profile -->
+    <div class="profile">
+
+        <!-- Apni profile image ka naam yahan rakho -->
+        <img src="images/profile.jpg" alt="Morg">
+
+        <h1>Morg</h1>
+
+        <div class="profile-info">
+            88 Videos &nbsp; • &nbsp; 298 Photos
+        </div>
+
+    </div>
+
+
+    <!-- Category Buttons -->
+    <div class="buttons">
+
+        <a href="#content">
+            +18 Livestream
+        </a>
+
+        <a href="#content">
+            Exclusive Content
+        </a>
+
+    </div>
+
+
+    <!-- Main Content -->
+    <div class="main-card" id="content">
+
+        <!-- Main image -->
+        <img src="images/main.jpg" alt="Morg">
+
+        <div class="main-content">
+
+            <h2>Welcome to Morg</h2>
+
+            <p>
+                Discover exclusive content, updates and more.
+            </p>
+
+            <!-- Yahan apna affiliate link lagana hai -->
+            <a class="cta"
+               href="YOUR-AFFILIATE-LINK"
+               target="_blank"
+               rel="noopener noreferrer">
+                Visit Now
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- Footer -->
+    <div class="footer">
+
+        <a href="#">DMCA</a>
+
+        <p>
+            © 2026 Morg. All rights reserved.
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+</html>
