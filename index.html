@@ -4,132 +4,136 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Morg - Official Website</title>
+<title>Morg</title>
 
 <style>
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #0b0b0f;
+    background: #09090c;
     color: #fff;
-    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
     width: 100%;
     max-width: 650px;
     margin: auto;
-    padding: 25px 15px 40px;
+    padding: 22px 12px 40px;
 }
 
-/* Profile */
+/* PROFILE */
 .profile {
     text-align: center;
-    padding-top: 15px;
+    padding: 10px 0 20px;
 }
 
 .profile img {
-    width: 110px;
-    height: 110px;
+    width: 105px;
+    height: 105px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid #fff;
-    margin-bottom: 12px;
 }
 
 .profile h1 {
     font-size: 28px;
-    margin-bottom: 8px;
+    margin-top: 12px;
 }
 
-.profile-info {
-    color: #aaa;
-    font-size: 15px;
+.stats {
+    color: #999;
+    font-size: 14px;
+    margin-top: 7px;
 }
 
-/* Buttons */
+/* BUTTONS */
 .buttons {
     display: flex;
     gap: 10px;
-    margin: 25px 0;
+    margin-bottom: 18px;
 }
 
 .buttons a {
     flex: 1;
-    text-decoration: none;
+    padding: 12px 5px;
     text-align: center;
-    padding: 13px 8px;
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: bold;
+    text-decoration: none;
     color: #fff;
-    background: #24242c;
-    border: 1px solid #3a3a44;
-    transition: 0.2s;
+    background: #222229;
+    border: 1px solid #38383f;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: bold;
 }
 
-.buttons a:hover {
-    background: #33333d;
+/* SLIDER */
+.slider {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    border-radius: 12px;
 }
 
-/* Main image */
-.main-card {
-    background: #15151b;
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.slide {
+    min-width: 100%;
+    scroll-snap-align: center;
     border-radius: 12px;
     overflow: hidden;
-    border: 1px solid #292932;
+    background: #15151b;
 }
 
-.main-card img {
+.slide img {
     width: 100%;
-    display: block;
     height: auto;
+    display: block;
 }
 
-.main-content {
-    padding: 18px;
+/* DOTS */
+.dots {
     text-align: center;
+    margin: 12px 0 20px;
 }
 
-.main-content h2 {
-    font-size: 20px;
-    margin-bottom: 8px;
+.dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin: 0 4px;
+    background: #777;
+    border-radius: 50%;
 }
 
-.main-content p {
-    color: #aaa;
-    font-size: 14px;
-    line-height: 1.5;
-}
-
-/* Affiliate button */
+/* CTA */
 .cta {
     display: block;
     width: 100%;
-    margin-top: 18px;
-    padding: 15px;
+    padding: 14px;
+    margin-top: 15px;
     text-align: center;
     text-decoration: none;
-    border-radius: 8px;
-    background: #fff;
     color: #111;
-    font-weight: bold;
+    background: #fff;
+    border-radius: 8px;
     font-size: 16px;
+    font-weight: bold;
 }
 
-.cta:hover {
-    opacity: 0.9;
-}
-
-/* Footer */
+/* FOOTER */
 .footer {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 25px;
 }
 
 .footer a {
@@ -141,14 +145,14 @@ body {
 .footer p {
     color: #555;
     font-size: 11px;
-    margin-top: 10px;
+    margin-top: 8px;
 }
 
-/* Mobile */
+/* MOBILE */
 @media (max-width: 480px) {
-
     .container {
-        padding: 20px 12px 30px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     .profile img {
@@ -162,7 +166,7 @@ body {
 
     .buttons a {
         font-size: 12px;
-        padding: 12px 5px;
+        padding: 12px 4px;
     }
 }
 </style>
@@ -172,66 +176,76 @@ body {
 
 <div class="container">
 
-    <!-- Profile -->
+    <!-- PROFILE -->
     <div class="profile">
 
-        <!-- Apni profile image ka naam yahan rakho -->
-        <img src="images/profile.jpg" alt="Morg">
+        <img src="images/profile.png" alt="Morg">
 
         <h1>Morg</h1>
 
-        <div class="profile-info">
+        <div class="stats">
             88 Videos &nbsp; • &nbsp; 298 Photos
         </div>
 
     </div>
 
 
-    <!-- Category Buttons -->
+    <!-- TOP BUTTONS -->
     <div class="buttons">
 
-        <a href="#content">
+        <a href="#slider">
             +18 Livestream
         </a>
 
-        <a href="#content">
+        <a href="#slider">
             Exclusive Content
         </a>
 
     </div>
 
 
-    <!-- Main Content -->
-    <div class="main-card" id="content">
+    <!-- PHOTO SLIDER -->
+    <div class="slider" id="slider">
 
-        <!-- Main image -->
-        <img src="images/main.jpg" alt="Morg">
+        <div class="slide">
+            <img src="images/Selider1.jpeg" alt="Morg">
+        </div>
 
-        <div class="main-content">
+        <div class="slide">
+            <img src="images/Selider2.jpeg" alt="Morg">
+        </div>
 
-            <h2>Welcome to Morg</h2>
-
-            <p>
-                Discover exclusive content, updates and more.
-            </p>
-
-            <!-- Yahan apna affiliate link lagana hai -->
-            <a class="cta"
-               href="YOUR-AFFILIATE-LINK"
-               target="_blank"
-               rel="noopener noreferrer">
-                Visit Now
-            </a>
-
+        <div class="slide">
+            <img src="images/Selider3.jpeg" alt="Morg">
         </div>
 
     </div>
 
 
-    <!-- Footer -->
+    <!-- SLIDER DOTS -->
+    <div class="dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+
+    <!-- AFFILIATE BUTTON -->
+    <a
+        class="cta"
+        href="YOUR-AFFILIATE-LINK"
+        target="_blank"
+        rel="noopener noreferrer">
+        Visit Now
+    </a>
+
+
+    <!-- FOOTER -->
     <div class="footer">
 
-        <a href="#">DMCA</a>
+        <a href="#">
+            DMCA
+        </a>
 
         <p>
             © 2026 Morg. All rights reserved.
