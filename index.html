@@ -14,50 +14,108 @@
 }
 
 body {
-    background: #09090c;
-    color: #fff;
+    background: #fff;
+    color: #222;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
     width: 100%;
-    max-width: 650px;
+    max-width: 1100px;
     margin: auto;
-    padding: 22px 12px 40px;
+    padding: 25px 20px 40px;
 }
 
 /* PROFILE */
 .profile {
-    text-align: center;
-    padding: 10px 0 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 5px 0 25px;
 }
 
-.profile img {
-    width: 105px;
-    height: 105px;
+.profile-photo {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.profile-photo img {
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #fff;
 }
 
-.profile h1 {
-    font-size: 28px;
-    margin-top: 12px;
+.online-dot {
+    position: absolute;
+    right: 3px;
+    bottom: 8px;
+    width: 20px;
+    height: 20px;
+    background: #f2184b;
+    border: 4px solid #fff;
+    border-radius: 50%;
 }
 
-.stats {
-    color: #999;
-    font-size: 14px;
+.profile-info {
+    padding-top: 12px;
+}
+
+.profile-name {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.profile-name h1 {
+    color: #182f91;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.flag {
+    font-size: 31px;
+}
+
+.verified {
+    color: #4b42dc;
+    font-size: 27px;
+}
+
+.stars {
+    color: #ffb900;
+    font-size: 30px;
+    letter-spacing: 2px;
     margin-top: 7px;
 }
 
-/* JERKMATE BANNER */
+.stats {
+    display: flex;
+    gap: 28px;
+    margin-top: 7px;
+}
+
+.stat {
+    color: #ed1680;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.stat-icon {
+    color: #172c91;
+    margin-right: 6px;
+    font-size: 23px;
+}
+
+/* BANNER */
 .banner {
     text-align: center;
-    margin: 5px 0 18px;
+    margin: 5px 0 25px;
 }
 
 .banner img {
+    width: 300px;
     max-width: 100%;
     height: auto;
     display: inline-block;
@@ -65,22 +123,28 @@ body {
 
 /* BUTTONS */
 .buttons {
+    max-width: 430px;
+    margin: 0 auto 25px;
     display: flex;
-    gap: 10px;
-    margin-bottom: 18px;
+    flex-direction: column;
+    gap: 24px;
 }
 
 .buttons a {
-    flex: 1;
-    padding: 12px 5px;
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
     text-align: center;
     text-decoration: none;
     color: #fff;
-    background: #222229;
-    border: 1px solid #38383f;
-    border-radius: 8px;
-    font-size: 13px;
+    background: #098dbd;
+    border-radius: 35px;
+    font-size: 20px;
     font-weight: bold;
+}
+
+.buttons a:hover {
+    background: #087da8;
 }
 
 /* SLIDER */
@@ -91,7 +155,6 @@ body {
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     scrollbar-width: none;
-    border-radius: 12px;
 }
 
 .slider::-webkit-scrollbar {
@@ -102,29 +165,44 @@ body {
     min-width: 100%;
     flex-shrink: 0;
     scroll-snap-align: center;
-    border-radius: 12px;
+    position: relative;
     overflow: hidden;
-    background: #15151b;
 }
 
 .slide img {
     width: 100%;
     height: auto;
+    max-height: 850px;
+    object-fit: cover;
     display: block;
+}
+
+/* EXPLICIT LABEL */
+.explicit-label {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 17px 10px;
+    background: rgba(0, 25, 35, 0.82);
+    color: #ffd700;
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 42px;
 }
 
 /* DOTS */
 .dots {
     text-align: center;
-    margin: 12px 0 20px;
+    margin: 15px 0 20px;
 }
 
 .dot {
     display: inline-block;
-    width: 7px;
-    height: 7px;
-    margin: 0 4px;
-    background: #777;
+    width: 8px;
+    height: 8px;
+    margin: 0 5px;
+    background: #999;
     border-radius: 50%;
 }
 
@@ -132,55 +210,128 @@ body {
 .cta {
     display: block;
     width: 100%;
-    padding: 14px;
-    margin-top: 15px;
+    max-width: 430px;
+    margin: 20px auto 0;
+    padding: 15px;
     text-align: center;
     text-decoration: none;
-    color: #111;
-    background: #fff;
-    border-radius: 8px;
-    font-size: 16px;
+    color: #fff;
+    background: #098dbd;
+    border-radius: 35px;
+    font-size: 19px;
     font-weight: bold;
 }
 
 /* FOOTER */
 .footer {
     text-align: center;
-    margin-top: 25px;
+    margin-top: 28px;
 }
 
 .footer a {
-    color: #777;
+    display: inline-block;
+    color: #555;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    padding: 10px 22px;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .footer p {
-    color: #555;
+    color: #888;
     font-size: 11px;
-    margin-top: 8px;
+    margin-top: 10px;
 }
 
 /* MOBILE */
-@media (max-width: 480px) {
+@media (max-width: 600px) {
 
     .container {
-        padding-left: 10px;
-        padding-right: 10px;
+        padding: 20px 0 35px;
     }
 
-    .profile img {
-        width: 95px;
-        height: 95px;
+    .profile {
+        padding: 0 20px 22px;
+        gap: 15px;
     }
 
-    .profile h1 {
+    .profile-photo img {
+        width: 105px;
+        height: 105px;
+    }
+
+    .online-dot {
+        width: 18px;
+        height: 18px;
+        right: 0;
+        bottom: 5px;
+    }
+
+    .profile-info {
+        padding-top: 5px;
+    }
+
+    .profile-name {
+        gap: 6px;
+    }
+
+    .profile-name h1 {
         font-size: 25px;
     }
 
+    .flag {
+        font-size: 24px;
+    }
+
+    .verified {
+        font-size: 22px;
+    }
+
+    .stars {
+        font-size: 25px;
+        letter-spacing: 0;
+    }
+
+    .stats {
+        gap: 15px;
+    }
+
+    .stat {
+        font-size: 16px;
+    }
+
+    .stat-icon {
+        font-size: 18px;
+    }
+
+    .banner {
+        margin-bottom: 24px;
+    }
+
+    .buttons {
+        padding: 0 20px;
+        gap: 24px;
+        margin-bottom: 25px;
+    }
+
     .buttons a {
-        font-size: 12px;
-        padding: 12px 4px;
+        font-size: 18px;
+        padding: 14px;
+    }
+
+    .slide img {
+        max-height: none;
+    }
+
+    .explicit-label {
+        font-size: 32px;
+        padding: 12px 10px;
+    }
+
+    .cta {
+        width: calc(100% - 40px);
     }
 }
 </style>
@@ -193,12 +344,44 @@ body {
     <!-- PROFILE -->
     <div class="profile">
 
-        <img src="images/profile.png" alt="Morg">
+        <div class="profile-photo">
 
-        <h1>Morg</h1>
+            <img src="images/profile.png" alt="Morg">
 
-        <div class="stats">
-            88 Videos &nbsp; • &nbsp; 298 Photos
+            <span class="online-dot"></span>
+
+        </div>
+
+        <div class="profile-info">
+
+            <div class="profile-name">
+
+                <h1>MORG</h1>
+
+                <span class="flag">🇺🇸</span>
+
+                <span class="verified">✓</span>
+
+            </div>
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <div class="stats">
+
+                <div class="stat">
+                    <span class="stat-icon">▣</span>
+                    88 videos
+                </div>
+
+                <div class="stat">
+                    <span class="stat-icon">▧</span>
+                    298 photos
+                </div>
+
+            </div>
+
         </div>
 
     </div>
@@ -216,7 +399,6 @@ body {
                 src="https://www.imglnkx.com/8780/DESIGN-19806_Neon_300100_6.gif"
                 width="300"
                 height="100"
-                border="0"
                 alt="Jerkmate">
 
         </a>
@@ -231,38 +413,56 @@ body {
             href="https://t.ajrkmx3.com/421332/8780/32504?aff_sub5=SF_006OG000004lmDN"
             target="_blank"
             rel="noopener noreferrer">
-            +18 Livestream
+            ▶ +18 Livestream
         </a>
 
         <a
             href="https://t.ajrkmx3.com/421332/8780/32504?aff_sub5=SF_006OG000004lmDN"
             target="_blank"
             rel="noopener noreferrer">
-            Exclusive Content
+            ▧ Explicit Content
         </a>
 
     </div>
 
 
-    <!-- AUTO SLIDER -->
+    <!-- SLIDER -->
     <div class="slider" id="slider">
 
         <div class="slide">
+
             <img src="images/Selider1.jpeg" alt="Morg">
+
+            <div class="explicit-label">
+                Explicit
+            </div>
+
         </div>
 
         <div class="slide">
+
             <img src="images/Selider2.jpeg" alt="Morg">
+
+            <div class="explicit-label">
+                Explicit
+            </div>
+
         </div>
 
         <div class="slide">
+
             <img src="images/Selider3.jpeg" alt="Morg">
+
+            <div class="explicit-label">
+                Explicit
+            </div>
+
         </div>
 
     </div>
 
 
-    <!-- SLIDER DOTS -->
+    <!-- DOTS -->
     <div class="dots">
 
         <span class="dot"></span>
@@ -272,7 +472,7 @@ body {
     </div>
 
 
-    <!-- AFFILIATE BUTTON -->
+    <!-- VISIT NOW -->
     <a
         class="cta"
         href="https://t.ajrkmx3.com/421332/8780/32504?aff_sub5=SF_006OG000004lmDN"
@@ -286,7 +486,7 @@ body {
     <div class="footer">
 
         <a href="#">
-            DMCA
+            🛡 DMCA
         </a>
 
         <p>
@@ -298,7 +498,7 @@ body {
 </div>
 
 
-<!-- AUTO SCROLL SCRIPT -->
+<!-- AUTO SCROLL -->
 <script>
 
 const slider = document.getElementById("slider");
